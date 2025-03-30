@@ -1,0 +1,36 @@
+{
+  "name": "Adnexos",
+  "package": "cloud.lazycat.app.adnexos",
+  "description": "无需费力，轻松与朋友在任何情况下分摊开销。",
+  "homepage": "https://github.com/tametsi/adnexos",
+  "author": "tametsi",
+  "app_features": [
+    "background_task",
+    "public_path"
+  ],
+  "subdomain": "adnexos",
+  "version": "0.9.1",
+  "public_paths": [
+    "/"
+  ],
+  "iconPath": "logo.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "app_8090_8090": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_ghcr.io_tametsi_adnexos_0.9.1": {
+    "originalImage": "ghcr.io/tametsi/adnexos:0.9.1",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/czyt/tametsi/adnexos:23ca124300183762",
+    "timestamp": "2025-03-30T12:22:17.596Z"
+  },
+  "app_volume_pb-data_/app/pb_data_action": "emptyDir",
+  "app_volume_/app/pb_data_location": "app_data"
+}

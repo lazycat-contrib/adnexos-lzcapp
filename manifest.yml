@@ -1,0 +1,23 @@
+lzc-sdk-version: "0.1"
+name: Adnexos
+package: cloud.lazycat.app.adnexos
+version: 0.9.1
+description: 无需费力，轻松与朋友在任何情况下分摊开销。
+homepage: https://github.com/tametsi/adnexos
+author: tametsi
+application:
+  subdomain: adnexos
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://adnexos:8090/
+services:
+  adnexos:
+    image: registry.lazycat.cloud/czyt/tametsi/adnexos:23ca124300183762
+    binds:
+      - /lzcapp/var/pb_data:/app/pb_data
