@@ -7,10 +7,9 @@ application:
   upstreams:
     - location: /
       backend: http://adnexos:8090/
-
 services:
   adnexos:
-    # upstream: ghcr.io/tametsi/adnexos:0.9.1
-    image: ghcr.io/tametsi/adnexos:0.9.1
+    # upstream: ghcr.io/tametsi/adnexos:0.12.1
+    image: registry.lazycat.cloud/czyt/tametsi/adnexos:30e09fdc30d89efc
     binds:
       - /lzcapp/var/pb_data:/app/pb_data
