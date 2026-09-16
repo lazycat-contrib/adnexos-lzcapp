@@ -1,0 +1,16 @@
+application:
+  subdomain: adnexos
+  public_path:
+    - /
+  background_task: true
+  multi_instance: false
+  upstreams:
+    - location: /
+      backend: http://adnexos:8090/
+
+services:
+  adnexos:
+    # upstream: ghcr.io/tametsi/adnexos:0.9.1
+    image: ghcr.io/tametsi/adnexos:0.9.1
+    binds:
+      - /lzcapp/var/pb_data:/app/pb_data
