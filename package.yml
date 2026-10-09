@@ -1,4 +1,5 @@
 package: cloud.lazycat.app.adnexos
+license: GPL-3.0
 version: 0.12.1
 name: Adnexos
 description: "无需费力，轻松与朋友在任何情况下分摊开销。"
